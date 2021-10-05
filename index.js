@@ -1,9 +1,20 @@
-let id = require(`./information.js`)
+const cowsay = require('cowsay');
 
-const cowsay = require("cowsay");
+function infos() {
+  return {
+    name: "AnneMarie",
+    campus: "RemoteFr",
+  };
+}
 
-console.log(cowsay.say({
-    text : id.name + id.campus,
-    e : "oO",
-    T : "U "
-}));
+function action() {
+  console.log(
+    cowsay.say({
+      text: infos().name + infos().campus,
+      e: "oO",
+      T: "U ",
+    })
+  );
+}
+
+action();
